@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天津大学专业匹配测试</title>
+  <meta
+    name="description"
+    content="32 道题，4 个维度，直接看看你更适合天津大学的哪个学院。"
+  />
+  <meta name="theme-color" content="#f1e8d8" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="天津大学专业匹配测试" />
+  <meta
+    property="og:description"
+    content="32 道题，4 个维度，直接看看你更适合天津大学的哪个学院。"
+  />
+  <meta property="og:site_name" content="天津大学专业匹配测试" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section id="screen-intro" class="screen" aria-labelledby="intro-title">
+      <div class="panel hero-panel">
+        <p class="eyebrow">TJU Major Match Test</p>
+        <h1 id="intro-title">做完这套题，看看你更适合天大的哪个学院。</h1>
+        <p class="hero-copy">
+          32 道题，4 个维度，22 个公开学院结果，加上 2 个隐藏彩蛋。
+          不聊什么人格，直接看你大概率会被分到哪一类。
+        </p>
+        <button id="start-button" class="primary-button" type="button">开始答题</button>
+      </div>
+    </section>
+
+    <section id="screen-test" class="screen" hidden aria-labelledby="test-title">
+      <div class="panel test-panel">
+        <div class="topbar">
+          <div class="progress" aria-hidden="true">
+            <span id="progress-bar"></span>
+          </div>
+          <p id="progress-text" class="progress-text">0 / 32</p>
+        </div>
+        <h2 id="test-title" class="screen-title">答题中</h2>
+        <div id="question-list" class="question-list"></div>
+        <button id="submit-button" class="primary-button" type="button" disabled>看匹配结果</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="screen" hidden aria-labelledby="result-title">
+      <div class="panel result-panel">
+        <h2 id="result-title" class="screen-title">匹配结果</h2>
+        <div id="result-mount" aria-live="polite"></div>
+        <button id="restart-button" class="secondary-button" type="button">重新开始</button>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
